@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/allproducts.min.css"/>
+    <link rel="icon" href="../images/sitelogo1.png"/>
+  </head>
+  <body>
+    <!--Header Section-->
+    <header class="navbar">
+      <div class="container navbar__contents">
+        <div class="navbar__logo">
+          <img
+            class="desktop__logo"
+            src="..//images/index-images/logo.png"
+            alt="logo"
+          />
+          <img
+            class="mobile__logo"
+            src="..//images/index-images/logo (4).png"
+            alt="logo"
+          />
+        </div>
+        <a href="./pages/catolog.html" class="navbar__toggle">
+          <img src="..//images/index-images/menu.svg" alt="Menu svg" />
+          <h3>Каталог</h3>
+        </a>
+        <div class="navbar__search">
+          <input id="text" type="text" placeholder="Найти товар" />
+          <button type="submit">
+            <img
+              class="search__image"
+              src="..//images/index-images/search.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="navbar__menus">
+          <a href="./pages/lovely.html">
+            <img src="..//images/index-images/heart.svg" alt="heart" />
+            <p>Избранное</p>
+          </a>
+          <a href="./pages/products.html">
+            <img src="..//images/index-images/kub.svg" alt="heart" />
+            <p>продукты</p>
+          </a>
+          <a href="./pages/">
+            <span>1</span>
+            <img src="..//images/index-images/shopping-cart.svg" alt="heart" />
+            <p>Корзина</p>
+          </a>
+        </div>
+        <div class="navbar__personal">
+          <img src="..//images/index-images/aleksey.svg" alt="aleks" />
+          <h4>Алексей</h4>
+        </div>
+        <a href="" class="down">
+          <img src="..//images/index-images/chevron-down.svg" alt="down" />
+        </a>
+      </div>
+    </header>
+    <!-- /Header Section-->
+
+    <!--Main Section-->
+    <main>
+       <section id="products">
+          <div class="container">
+            <h1>Все продукты</h1>
+            <div class="discount__products">
+                <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src="../images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <img src="../images/index-images/kolbasa1.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>Г/Ц Блинчики с мясом вес, Россия</h3>
+                  </div>
+                  <img class="product__star" src="../images/index-images/stars.png" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div>
+                <!-- <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src=".//images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <img src=".//images/index-images/kolbasa.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</h3>
+                  </div>
+                  <img class="product__star" src=".//images/index-images/stars.png" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div>
+                <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src=".//images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <img src=".//images/index-images/sosiska.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>
+                      Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                    </h3>
+                  </div>
+                  <img class="product__star" src=".//images/index-images/stars.png" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div>
+                <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src=".//images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <img src=".//images/index-images/moloko.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...</h3>
+                  </div>
+                  <img class="product__star" src=".//images/index-images/stars.png" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div> -->
+            </div>
+            <!-- <div class="discount__products">
+                <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src=".//images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <img src=".//images/index-images/kolbasa33.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>Г/Ц Блинчики с мясом вес, Россия</h3>
+                  </div>
+                  <img class="product__star" src=".//images/index-images/stars.png" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div>
+                <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src=".//images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <a class="amount__dis"> -50% </a>
+                  <img src=".//images/index-images/sosiska.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</h3>
+                  </div>
+                  <img class="product__star" src=".//images/index-images/stars.png" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div>
+                <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src=".//images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <a class="amount__dis"> -50% </a>
+                  <img src=".//images/index-images/kolbasa.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>
+                      Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                    </h3>
+                  </div>
+                  <img class="product__star" src="./images/index-images/stars" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div>
+                <div class="discount__product">
+                  <div class="heart" onclick="changeColor()">
+                    <img src=".//images/index-images/heart.svg" alt="heart" />
+                  </div>
+                  <a class="amount__dis"> -50% </a>
+                  <img src=".//images/index-images/moloko.png" alt="blinchik" />
+                  <div class="discount__product--price">
+                    <div class="price__left">
+                      <h1>44,50 ₽</h1>
+                      <p>С картой</p>
+                    </div>
+                    <div class="price__right">
+                      <h1>50,50 ₽</h1>
+                      <p>Обычная</p>
+                    </div>
+                  </div>
+                  <div class="discount__product--infos">
+                    <h3>Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...</h3>
+                  </div>
+                  <img class="product__star" src=".//images/index-images/stars.png" alt="" />
+                  <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
+                </div>
+            </div> -->
+          </div>
+       </section>
+    </main>
+    <!-- /Main Section-->
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer__top" style="background-image: url(./images/footer__background.png);">
+          <div class="container">
+            <div class="footer__medias">
+              <img class="footer__smile" src="..//images/index-images/smile.png" alt="">
+              <div class="footer__infos2">
+                <ul class="footer__infos">
+                  <li>
+                    <a href="./pages/about.html">
+                      О компании
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./pages/about.html">
+                      Контакты
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./pages/about.html">
+                      Статьи
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./pages/about.html">
+                      Вакансии
+                    </a>
+                  </li>
+                </ul>
+                <p>Политика обработки персональных данных</p>
+              </div>
+              <div class="social__medias">
+                <div class="medias">
+                  <img src="..//images/index-images/instagram.svg" alt="">
+                  <img src="..//images/index-images/vkontakte.svg" alt="">
+                  <img src="..//images/index-images/facebook.svg" alt="">
+                  <img src="..//images/index-images/ok.svg" alt="">
+                </div>
+                <div class="tel">
+                  <div class="footer__tel">
+                    <img src="..//images/index-images/phone.svg" alt="">
+                     <p>8 800 777 33 33</p>
+                  </div>
+                  <div class="footer__dizayn">
+                    <p>Дизайн</p>
+                    <img class="zasoviskiy" src="../images/index-images/Zasovskiy.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__infos1">
+              <ul class="footer__infos">
+                <li>
+                  <a href="./pages/about.html">
+                    О компании
+                  </a>
+                </li>
+                <li>
+                  <a href="./pages/about.html">
+                    Контакты
+                  </a>
+                </li>
+                <li>
+                  <a href="./pages/about.html">
+                    Статьи
+                  </a>
+                </li>
+                <li>
+                  <a href="./pages/about.html">
+                    Вакансии
+                  </a>
+                </li>
+              </ul>
+              <p>Политика обработки персональных данных</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="navbar__menus">
+              <a href="./pages/lovely.html">
+                <img src="..//images/index-images/menu__black.svg" alt="heart" />
+                <p>Каталог</p>
+              </a>
+              <a href="./pages/lovely.html">
+                <img src="..//images/index-images/heart.svg" alt="heart" />
+                <p>Избранное</p>
+              </a>
+              <a href="./pages/products.html">
+                <img src="..//images/index-images/kub.svg" alt="heart" />
+                <p>Заказы</p>
+              </a>
+              <a href="./pages/">
+                <span>1</span>
+                <img src="..//images/index-images/shopping-cart.svg" alt="heart" />
+                <p>Корзина</p>
+              </a>
+              <div class="navbar__personal">
+                <img src="..//images/index-images/aleksey.svg" alt="aleks" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer Section-->
+  </body>
+</html>

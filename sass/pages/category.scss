@@ -1,0 +1,175 @@
+@use "../utils/variable"as var;
+@use "../base/fonts";
+@use "../global";
+
+body,
+a {
+    font-family: "Rubik";
+}
+
+.container__1250 {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#category {
+    padding-top: 120px;
+
+    .category__tab {
+        display: flex;
+        margin-bottom: 27px;
+
+        a {
+            color: var.$subtitle-color;
+            font-size: 8px;
+
+            &:hover {
+                color: black;
+            }
+        }
+        img{
+            width: 8px;
+        }
+    }
+
+    h1 {
+        color: var.$subtitle-color;
+        font-family: Rubik;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        margin-bottom: 40px;
+    }
+
+    .category__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        @media(min-width:1000px) {
+            gap: 40px;
+        }
+
+        .category__card:nth-child(1),
+        .category__card:nth-child(10),
+        .category__card:nth-child(13){
+            max-width: 300px;
+            @media(min-width:400px) {
+                max-width: 350px;
+            }
+            @media(min-width:450px) {
+                max-width: 400px;
+            }
+            @media(min-width:551px) {
+                max-width: 500px;
+            }
+            @media(min-width:680px) {
+                max-width: 630px;
+            }
+            max-height: 140px;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .category__card:nth-child(10){
+            @media(min-width:780px) {
+                max-width: 448px;
+            }
+        }
+        .category__card:nth-child(1),
+        .category__card:nth-child(2){
+            @media(min-width:780px) {
+                display: none;
+            }
+            @media(min-width:1000px) {
+                display: inline-block;
+            }
+        }
+        .category__card:nth-child(1),
+        .category__card:nth-child(10){
+            @media(min-width:1000px) {
+                display: inline-block;
+                max-width: 530px;
+                max-height: 188px;
+                
+            }
+            img{
+                height: 100%;
+            }
+        }
+
+        .category__card:nth-child(2),
+        .category__card:nth-child(3),
+        .category__card:nth-child(4),
+        .category__card:nth-child(5),
+        .category__card:nth-child(6),
+        .category__card:nth-child(7),
+        .category__card:nth-child(8),
+        .category__card:nth-child(9),
+        .category__card:nth-child(11),
+        .category__card:nth-child(12){
+            width: 100%;
+            max-width: 300px;
+            @media(min-width:360px) {
+                max-width: 137px;
+            }
+            @media(min-width:400px) {
+                max-width: 163px;
+            }
+            @media(min-width:450px) {
+                max-width: 188px;
+            }
+            @media(min-width:551px) {
+                max-width: 238px;
+            }
+            @media(min-width:680px) {
+                max-width: 280px;
+            }
+            @media(min-width:780px) {
+                max-width: 224px;
+            }
+            @media(min-width:1000px) {
+                max-width: 250px;
+                
+            }
+            
+            img{
+                width: 100%;
+            }
+            
+        }
+        .category__card:nth-child(9){
+                @media(min-width:780px) {
+                    max-width: 256px;
+                }
+        }
+        .category__card:nth-child(13){
+            @media(min-width:780px) {
+                max-width: 224px;
+                max-height: 165px;
+                
+                img{
+                    height: 100%;
+                }
+            }
+            @media(min-width:1000px){
+                max-width: 256px;
+                max-height: 188px;
+            }
+        }
+        .category__card:nth-child(12){
+            @media(min-width:1136px){
+                max-width: 530px;
+                max-height: 188px;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

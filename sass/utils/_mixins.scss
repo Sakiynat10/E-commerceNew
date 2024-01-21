@@ -1,0 +1,13 @@
+@use "./variables" as var;
+
+@mixin btn($padding:16px 48px){
+    background-color: var.$btn-nbg-color;
+    padding: $padding;
+    border-radius: 40px;
+    color: #1B1C2A;
+    font-size: 18px;
+    line-height: 32px;
+    border: none;
+    cursor: pointer;
+
+}
