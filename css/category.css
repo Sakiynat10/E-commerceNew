@@ -7,12 +7,69 @@
   text-decoration: none;
 }
 
+* {
+  font-family: "Rubik", sans-serif;
+}
+
 .container {
   max-width: 1288px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
   padding-left: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.catolog__menu {
+  display: none;
+  right: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  top: -200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (min-width: 768px) {
+  .catolog__menu {
+    display: block;
+  }
+}
+
+.menu {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.catolog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 40px 20px 20px 20px;
+}
+.catolog ul li {
+  padding-bottom: 24px;
+}
+.catolog ul li a {
+  color: var(--Main-onSurface, #414141);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.show-toggle {
+  top: 100px;
 }
 
 .navbar {
@@ -87,7 +144,7 @@
     width: 140px;
   }
 }
-.navbar__contents .navbar__toggle h3 {
+.navbar__contents .navbar__toggle a {
   display: none;
   font-size: 16px;
   font-weight: 400;
@@ -95,7 +152,7 @@
   color: #fff;
 }
 @media (min-width: 1080px) {
-  .navbar__contents .navbar__toggle h3 {
+  .navbar__contents .navbar__toggle a {
     display: block;
   }
 }
@@ -254,21 +311,6 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
 }
 
 footer img {
@@ -525,6 +567,7 @@ footer .footer__bottom .navbar__menus a img {
 body,
 a {
   font-family: "Rubik";
+  color: aliceblue;
 }
 
 .container__1250 {
@@ -609,6 +652,9 @@ a {
 #category .category__cards .overlay:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 102, 51, 0)), to(#F63));
   background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #F63 100%);
+}
+#category .category__cards .overlay p {
+  padding: 120px 100px 10px 10px;
 }
 #category .category__cards .category__card:nth-child(1),
 #category .category__cards .category__card:nth-child(10),

@@ -5,6 +5,7 @@
 body,
 a {
     font-family: "Rubik";
+    color: aliceblue;
 }
 
 .container__1250 {
@@ -76,6 +77,9 @@ a {
             color: var.$white-color;
             &:hover{
                 background: linear-gradient(180deg, rgba(255, 102, 51, 0.00) 0%, #F63 100%);
+            }
+            p{
+                padding: 120px 100px 10px 10px;
             }
         }
 

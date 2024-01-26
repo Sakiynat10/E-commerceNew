@@ -5,11 +5,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/glavniy.min.css" />
   <link rel="icon" href="./images/sitelogo1.png">
 </head>
 
 <body>
+  <div class="catolog__menu">
+    <div class="container">
+      <div class="catolog">
+        <ul>
+          <li>
+            <a href="">Молоко, сыр, яйцо</a>
+          </li>
+          <li>
+            <a href="">Хлеб</a>
+          </li>
+          <li>
+            <a href="">Фрукты и овощи</a>
+          </li>
+          <li>
+            <a href="">Замороженные продукты</a>
+          </li>
+        </ul>
+        <ul>  
+          <li>
+            <a href="">Напитки</a>
+          </li>
+          <li>
+            <a href="">Кондитерские изделия</a>
+          </li>
+          <li>
+            <a href="">Чай, кофе</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="">Бакалея</a>
+          </li>
+          <li>
+            <a href="">Здоровое питание</a>
+          </li>
+          <li>
+            <a href="">Зоотовары</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="">Непродовольственные товары</a>
+          </li>
+          <li>
+            <a href="">Детское питание</a>
+          </li>
+          <li>
+            <a href="">Мясо, птица, колбаса</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <header class="navbar">
     <div class="container navbar__contents">
       <div class="navbar__logo">
@@ -17,16 +73,10 @@
         <img class="mobile__logo" src=".//images/index-images/logo (4).png" alt="logo" />
       </div>
       <div href="./pages/catolog.html" class="navbar__toggle dropdown">
-        <img src=".//images/index-images/menu.svg" alt="Menu svg" />
-        <h3>Каталог</h3>
-        <div class="dropdown-content">
-          <a href="./about.html">about</a>
-          <a href="./allproducts.html">allproducts</a>
-          <a href="./pages/categry.html">category</a>
-          <a href="./catolog.html">catalog</a>
-          <a href="./connecting.html">connecting</a>
-          <a href="./kontakt.html">kontakt</a>
-        </div>
+        <button class="menu">        
+          <img src=".//images/index-images/menu.svg" alt="Menu svg" />
+        </button>
+        <a href="./pages/categry.html">Каталог</a>
       </div>
       <div class="navbar__search">
         <input id="text" type="text" placeholder="Найти товар" />
@@ -74,96 +124,7 @@
           </a>
         </div>
         <div class="discount__products">
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <a class="amount__dis"> -50% </a>
-            <img src=".//images/index-images/blinchik.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Г/Ц Блинчики с мясом вес, Россия</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <a class="amount__dis"> -50% </a>
-            <img src=".//images/index-images/moloko.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <a class="amount__dis"> -50% </a>
-            <img src=".//images/index-images/kolbasa.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>
-                Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
-              </h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <a class="amount__dis"> -50% </a>
-            <img src=".//images/index-images/sosiska.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -175,93 +136,7 @@
             Все акции <img src=".//images/index-images/chevron-down.svg" alt="" />
           </a>
         </div>
-        <div class="discount__products">
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <img src=".//images/index-images/kolbasa1.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Г/Ц Блинчики с мясом вес, Россия</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <img src=".//images/index-images/kolbasa.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <img src=".//images/index-images/sosiska.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>
-                Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
-              </h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <img src=".//images/index-images/moloko.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
+        <div  class="discount__products new__row">
         </div>
       </div>
     </section>
@@ -273,96 +148,7 @@
             Все акции <img src=".//images/index-images/chevron-right.svg" alt="" />
           </a>
         </div>
-        <div class="discount__products">
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <img src=".//images/index-images/kolbasa33.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Г/Ц Блинчики с мясом вес, Россия</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <a class="amount__dis"> -50% </a>
-            <img src=".//images/index-images/sosiska.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <a class="amount__dis"> -50% </a>
-            <img src=".//images/index-images/kolbasa.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>
-                Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
-              </h3>
-            </div>
-            <img class="product__star" src="./images/index-images/stars" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
-          <div class="discount__product">
-            <div class="heart" onclick="changeColor()">
-              <img src=".//images/index-images/heart.svg" alt="heart" />
-            </div>
-            <a class="amount__dis"> -50% </a>
-            <img src=".//images/index-images/moloko.png" alt="blinchik" />
-            <div class="discount__product--price">
-              <div class="price__left">
-                <h1>44,50 ₽</h1>
-                <p>С картой</p>
-              </div>
-              <div class="price__right">
-                <h1>50,50 ₽</h1>
-                <p>Обычная</p>
-              </div>
-            </div>
-            <div class="discount__product--infos">
-              <h3>Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...</h3>
-            </div>
-            <img class="product__star" src=".//images/index-images/stars.png" alt="" />
-            <a href="./pages/korzinka.html" class="korzinu"> В корзину </a>
-          </div>
+        <div class="discount__products new__buy">
         </div>
       </div>
     </section>
@@ -389,25 +175,24 @@
     </section>
     <section id="Magazine">
       <div class="container">
-        <h1>Наши магазины</h1>
-        <ul>
-          <li>
-            <a href="#"> п.Щельяюр </a>
-          </li>
-          <li>
-            <a href="#"> д.Вертеп </a>
-          </li>
-          <li>
-            <a href="#"> с.Краснобор </a>
-          </li>
-          <li>
-            <a href="#"> д.Диюр </a>
-          </li>
-        </ul>
-        <iframe class="iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428936.0574340149!2d53.26211705598162!3d65.1684541307271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4472340bbf53f20d%3A0x6aaf90d406ef7886!2sShchel&#39;yaiur%2C%20Komi%20Republic%2C%20Russia!5e0!3m2!1sen!2s!4v1704851123652!5m2!1sen!2s"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="tab">
+          <div class="tab__buttons">
+            <button class="btn__map">п.Щельяюр</button>
+            <button class="btn__map"> д.Вертеп</button>
+            <button class="btn__map">с.Краснобор</button>
+            <button class="btn__map">д.Диюр </button>
+          </div>
+          <div class="tab-contents">
+            <div class="tab-content">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d957.925942799174!2d100.3715809!3d16.1842196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e00e7ce1933d3f%3A0xbfeb46ca0bc0dc78!2z4LmC4Lij4LiH4LmA4Lij4Li14Lii4LiZ4Lin4Lix4LiU4Lin4Lix4LiH4LmE4LiE4Lij4LmJ!5e0!3m2!1sru!2s!4v1706228773110!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="tab-content">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3419.6422477668357!2d16.651967704056165!3d64.62467591700383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4670a0d637758669%3A0xa08e18eba1456236!2sCoop%20Konsum!5e0!3m2!1sru!2s!4v1706228817101!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="tab-content">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d137.17068305292457!2d-101.65070860013192!3d56.62729789583113!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x525a11011c838031%3A0x765b408a422a0866!2z0KHRgtGA0LjQu9C60LjRg9GB0LrQuCDQmtC-0L3RgtGA0LDQutGC0LjQvdCzINCb0YLQtCDQmtGN0LzQvw!5e0!3m2!1sru!2s!4v1706228878373!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="tab-content">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.0728840436495!2d69.20123767352207!3d41.28551820231164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1sru!2s!4v1706228904071!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="article">
@@ -575,10 +360,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>    
     </div>
   </footer>
+  <!-- <script src="./js/main.js"></script> -->
   <script src="./js/main.js"></script>
+  <script src="./js/products-data.js"></script>
+  <script src="./js/home.js"></script>
 </body>
 
 </html>

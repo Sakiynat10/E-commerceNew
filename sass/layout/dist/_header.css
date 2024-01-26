@@ -1,3 +1,7 @@
+.catolog {
+  display: none;
+}
+
 .navbar {
   position: fixed;
   z-index: 10;
@@ -58,7 +62,7 @@
     width: 140px;
   }
 }
-.navbar__contents .navbar__toggle h3 {
+.navbar__contents .navbar__toggle a {
   display: none;
   font-size: 16px;
   font-weight: 400;
@@ -66,7 +70,7 @@
   color: #fff;
 }
 @media (min-width: 1080px) {
-  .navbar__contents .navbar__toggle h3 {
+  .navbar__contents .navbar__toggle a {
     display: block;
   }
 }
