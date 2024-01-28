@@ -1,1 +1,32 @@
+@use "../utils/variable" as var;
 @use "../global";
+
+.products {
+    padding-top: 120px;
+    .title {
+        font-size: 45px;
+        padding-bottom: 60px;
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    padding-top: 64px;
+    gap: 34px;
+    button{
+        border-radius: 20px;
+        border: none;
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var.$primary-color;
+        background-color: transparent;
+    }
+    .active{
+        background-color: var.$primary-color;
+        color: aliceblue;
+    }
+
+    
+}

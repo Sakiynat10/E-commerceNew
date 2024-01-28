@@ -563,3 +563,35 @@ footer .footer__bottom .navbar__menus a p {
 footer .footer__bottom .navbar__menus a img {
   width: 24px;
 }
+
+.products {
+  padding-top: 120px;
+}
+.products .title {
+  font-size: 45px;
+  padding-bottom: 60px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 64px;
+  gap: 34px;
+}
+.pagination button {
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #FF6633;
+  background-color: transparent;
+}
+.pagination .active {
+  background-color: #FF6633;
+  color: aliceblue;
+}

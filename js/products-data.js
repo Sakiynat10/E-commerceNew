@@ -1,10 +1,11 @@
 const products = [
     {
       id: 1,
-      name: "Apple",
+      name: "Butter",
       category: "Fruit",
       description: "A round fruit with a red, green, or yellow ",
-      price: 89,
+      price: "79.00$",
+      disprice:"70.50$",
       rating: 5,
       discount: 0,
       images: [
@@ -16,11 +17,12 @@ const products = [
     },
     {
       id: 2,
-      name: "Banana",
+      name: "Tea",
       category: "Fruit",
       description:
         "A long, curved fruit with a yellow skin and sweet, creamy white flesh.",
-      price: 71,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 5,
       discount: 20,
       images: [
@@ -32,11 +34,12 @@ const products = [
     },
     {
       id: 3,
-      name: "Bread",
+      name: "Colbasa",
       category: "Bakery",
       description:
         "A staple food made from flour, water, and yeast, baked into a loaf.",
-      price: 88,
+      price: "50.50$",
+      disprice:"45.50$",
       rating: 5,
       discount: 20,
       images: [
@@ -48,11 +51,12 @@ const products = [
     },
     {
       id: 4,
-      name: "Broccoli",
+      name: "Pomegranate",
       category: "Vegetable",
       description:
         "A green vegetable with a tree-like appearance, known for its high nutrient content.",
-      price: 94,
+      price: "65.50$",
+      disprice:"45.00$",
       rating: 4.5,
       discount: 20,
       images: [
@@ -64,11 +68,12 @@ const products = [
     },
     {
       id: 5,
-      name: "Carrot",
+      name: "Berry",
       category: "Vegetable",
       description:
         "A root vegetable with a crunchy texture and a sweet, earthy flavor.",
-      price: 82,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 5,
       discount: 20,
       images: [
@@ -80,11 +85,12 @@ const products = [
     },
     {
       id: 6,
-      name: "Cheese",
+      name: "Strawberry",
       category: "Dairy",
       description:
         "A dairy product made from milk, with a variety of textures and flavors.",
-      price: 91,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 3.5,
       discount: 50,
       images: [
@@ -96,11 +102,12 @@ const products = [
     },
     {
       id: 7,
-      name: "Chicken",
+      name: "Cakes",
       category: "Meat",
       description:
         "A type of poultry, often used as a source of protein in meals.",
-      price: 68,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 3.5,
       discount: 20,
       images: [
@@ -112,12 +119,13 @@ const products = [
     },
     {
       id: 8,
-      name: "Chocolate",
+      name: "Pepsi",
       category: "Dessert",
       description:
         "A sweet food made from cacao beans, used in a variety of desserts and confections.",
-      price: 61,
-      rating: 4.5,
+        price: "55.00$",
+        disprice:"40.00$",
+        rating: 4.5,
       discount: 20,
       images: [
         "../images/products/8.png",
@@ -128,11 +136,12 @@ const products = [
     },
     {
       id: 9,
-      name: "Coffee",
+      name: "Peach",
       category: "Dessert",
       description:
         "A dark, bitter beverage made from roasted coffee beans, typically used as a pick-me-up.",
-      price: 98,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 5,
       discount: 20,
       images: [
@@ -144,11 +153,12 @@ const products = [
     },
     {
       id: 10,
-      name: "Egg",
+      name: "Cheese",
       category: "Dairy",
       description:
         "A oval-shaped reproductive body produced by birds, often used as a source of protein in meals.",
-      price: 79,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 4.5,
       discount: 0,
       images: [
@@ -160,11 +170,12 @@ const products = [
     },
     {
       id: 11,
-      name: "Fish",
+      name: "Coffe",
       category: "Meat",
       description:
         "A type of seafood, known for its omega-3 fatty acids and high protein content.",
-      price: 89,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 3.5,
       discount: 50,
       images: [
@@ -176,11 +187,12 @@ const products = [
     },
     {
       id: 12,
-      name: "Grapes",
+      name: "Cebab",
       category: "Fruit",
       description:
         "A small, sweet fruit that grows in clusters, often used in wine-making.",
-      price: 61,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 4,
       discount: 20,
       images: [
@@ -196,7 +208,8 @@ const products = [
       category: "Fast food",
       description:
         "A sandwich made with a patty of ground beef, served on a bun with various toppings.",
-      price: 87,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 5,
       discount: 0,
       images: [
@@ -208,11 +221,12 @@ const products = [
     },
     {
       id: 14,
-      name: "Hot dog",
+      name: "Fructis",
       category: "Fast food",
       description:
         "A type of sausage served in a long roll, often used as a quick and convenient food.",
-      price: 84,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 4.5,
       discount: 50,
       images: [
@@ -228,7 +242,8 @@ const products = [
       category: "Dessert",
       description:
         "A frozen dessert made from cream, sugar, and flavorings, available in a variety of flavors.",
-      price: 68,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 4.5,
       discount: 0,
       images: [
@@ -244,7 +259,8 @@ const products = [
       category: "Fruit",
       description:
         "A yellow citrus fruit with a tart, acidic flavor, often used in cooking and baking.",
-      price: 74,
+        price: "55.00$",
+        disprice:"40.00$",
       rating: 3.5,
       discount: 0,
       images: [
@@ -256,11 +272,12 @@ const products = [
     },
     {
       id: 17,
-      name: "Eggs",
+      name: "Apple",
       category: "Dairy",
       description:
         "Eggs are oval-shaped reproductive structures produced by female birds and some reptiles.",
-      price: 70,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4.5,
       discount: 50,
       images: [
@@ -272,11 +289,12 @@ const products = [
     },
     {
       id: 18,
-      name: "Honey",
+      name: "Bread",
       category: "Dairy",
       description:
         "Honey is a sweet, sticky liquid made by bees from the nectar of flowers.",
-      price: 87,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4,
       discount: 0,
       images: [
@@ -288,11 +306,12 @@ const products = [
     },
     {
       id: 19,
-      name: "Ice Cream",
+      name: "Coke",
       category: "Dessert",
       description:
         "Ice cream is a frozen dessert made from cream, sugar, and flavorings.",
-      price: 83,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4.5,
       discount: 0,
       images: [
@@ -304,11 +323,12 @@ const products = [
     },
     {
       id: 20,
-      name: "Jelly",
+      name: "Kebab",
       category: "Fruit",
       description:
         "Jelly is a sweet spread made from fruit juice and sugar, often used as a topping for toast or pastries.",
-      price: 76,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 5,
       discount: 0,
       images: [
@@ -320,11 +340,12 @@ const products = [
     },
     {
       id: 21,
-      name: "Ketchup",
+      name: "Kokteyl",
       category: "Dairy",
       description:
         "Ketchup is a tangy sauce made from tomatoes, vinegar, sugar, and spices.",
-      price: 77,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 5,
       discount: 0,
       images: [
@@ -336,11 +357,12 @@ const products = [
     },
     {
       id: 22,
-      name: "Mango",
+      name: "Banana",
       category: "Fruit",
       description:
         "Mangoes are juicy, sweet tropical fruits with a fleshy interior and a large, oblong seed in the center.",
-      price: 80,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 5,
       discount: 20,
       images: [
@@ -352,11 +374,12 @@ const products = [
     },
     {
       id: 23,
-      name: "Noodles",
+      name: "Fruit-juice",
       category: "Meat",
       description:
         "Noodles are a type of pasta made from wheat flour and water, often used in Asian cuisine.",
-      price: 93,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 3.5,
       discount: 20,
       images: [
@@ -368,11 +391,12 @@ const products = [
     },
     {
       id: 24,
-      name: "Oatmeal",
+      name: "Pitsa",
       category: "Breakfast",
       description:
         "Oatmeal is a type of porridge made from oats that is often served for breakfast.",
-      price: 94,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4.5,
       discount: 0,
       images: [
@@ -384,11 +408,12 @@ const products = [
     },
     {
       id: 25,
-      name: "Bacon",
+      name: "Apelsin",
       category: "Breakfast",
       description:
         "Bacon is a popular breakfast food made from cured pork belly, it is newly delivered.",
-      price: 71,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 3.5,
       discount: 20,
       images: [
@@ -400,11 +425,12 @@ const products = [
     },
     {
       id: 26,
-      name: "Pancakes",
+      name: "Apricot",
       category: "Breakfast",
       description:
         "Pancakes are a popular breakfast food made from flour, eggs, and milk.",
-      price: 63,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4,
       discount: 0,
       images: [
@@ -416,11 +442,12 @@ const products = [
     },
     {
       id: 27,
-      name: "Waffles",
+      name: "Fish",
       category: "Breakfast",
       description:
         "Waffles are a type of breakfast food made from batter cooked in a waffle iron.",
-      price: 97,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4.5,
       discount: 20,
       images: [
@@ -432,11 +459,12 @@ const products = [
     },
     {
       id: 28,
-      name: "Fried Rice",
+      name: "Pineapple",
       category: "Lunch",
       description:
         "Fried Rice is a type of rice dish that is stir-fried in a pan with oil and other ingredients.",
-      price: 81,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4,
       discount: 20,
       images: [
@@ -448,11 +476,12 @@ const products = [
     },
     {
       id: 29,
-      name: "Spaghetti",
+      name: "Noodless",
       category: "Lunch",
       description:
         "Spaghetti is a type of pasta made from wheat flour and water, usually served with sauce.",
-      price: 96,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 3,
       discount: 50,
       images: [
@@ -464,11 +493,12 @@ const products = [
     },
     {
       id: 30,
-      name: "Pizza",
+      name: "Capuchino",
       category: "Lunch",
       description:
         "Pizza is a popular dish made from dough, sauce, cheese, and toppings.",
-      price: 95,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4,
       discount: 0,
       images: [
@@ -480,11 +510,12 @@ const products = [
     },
     {
       id: 31,
-      name: "Grilled Cheese",
+      name: "Milk",
       category: "Lunch",
       description:
         "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
-      price: 100,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 5,
       discount: 50,
       images: [
@@ -496,11 +527,12 @@ const products = [
     },
     {
       id: 32,
-      name: "Steak",
+      name: "Chocolate",
       category: "Dinner",
       description:
         "Steak is a popular dinner dish made from a cut of beef that is usually grilled or pan-fried.",
-      price: 63,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4.5,
       discount: 20,
       images: [
@@ -512,11 +544,12 @@ const products = [
     },
     {
       id: 33,
-      name: "Salmon",
+      name: "Pumken",
       category: "Dinner",
       description:
         "Salmon is a type of fish that is often grilled or baked and served as a main course.",
-      price: 82,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4.5,
       discount: 20,
       images: [
@@ -528,11 +561,12 @@ const products = [
     },
     {
       id: 34,
-      name: "Chicken Alfredo",
+      name: "Kiwi",
       category: "Dinner",
       description:
         "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
-      price: 94,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 4,
       discount: 20,
       images: [
@@ -544,11 +578,12 @@ const products = [
     },
     {
       id: 35,
-      name: "Lasagna",
+      name: "Pomegranate",
       category: "Dinner",
       description:
         "Lasagna is a type of pasta dish made with layers of pasta, sauce, cheese, and meat or vegetables.",
-      price: 70,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 1,
       discount: 0,
       images: [
@@ -560,11 +595,12 @@ const products = [
     },
     {
       id: 36,
-      name: "Chocolate Chip Cookies",
+      name: "Watermelon",
       category: "Dessert",
       description:
         "Chocolate Chip Cookies are a type of cookie made from flour, sugar, butter, and chocolate chips.",
-      price: 98,
+      price: "55.00$",
+      disprice:"40.00$",
       rating: 3.5,
       discount: 0,
       images: [

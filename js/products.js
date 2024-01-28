@@ -1,8 +1,9 @@
-const discountProducts = document.querySelector(".discount__products");
-const newRow = document.querySelector(".new__row");
-const newBuys = document.querySelector(".new__buy");
+const productsRow = document.querySelector(".discount__products");
 const searchInput = document.querySelector(".search-input");
-const search = " ";
+let search = "";
+// const productsQuantity = document.querySelector(".products-quantity");
+const pagination = document.querySelector(".pagination");
+let activePage = 1;
 
 function getDisProduct({
   id,
@@ -63,16 +64,20 @@ function getDisProduct({
 
   if (rating == 5) {
     discountProductRating.src = "../images/products/rating5.svg";
-  }else if(rating == 4.5){
+  } else if (rating == 4.5) {
     discountProductRating.src = "../images/products/rating4.5.png";
-  }else if(rating == 4){
+  } else if (rating == 4) {
     discountProductRating.src = "../images/products/rating3.png";
-  }else if(rating == 3){
+  } else if (rating == 3) {
     discountProductRating.src = "../images/products/rating3.svg";
-  }else if(rating == 2){
+  } else if (rating == 2) {
     discountProductRating.src = "../images/products/rating2.png";
-  }else if(rating == 1){
+  } else if (rating == 1) {
     discountProductRating.src = "../images/products/rating2.png";
+  }
+
+  if(discount == 0){
+    discountProductDiscount.style.display = "none";
   }
   discountProductDiscount.appendChild(discountProductDiscountText);
   discountProductPriceLeftH1.appendChild(discountProductPriceLeftH1Text);
@@ -117,136 +122,73 @@ function getDisProduct({
     discountProductDiscount
   );
 
-  discountProducts.append(discountProduct);
+  productsRow.append(discountProduct);
 
   return discountProduct;
 }
 
 
 
-let discountCard = products.filter((el) => el.discount).slice(-4);
+function getProducts() {
+  let results = products.filter((el) => el.name.toLowerCase().includes(search));
 
-discountCard.forEach((el) => {
-  discountProducts.append(getDisProduct(el));
-});
+  let pages = Math.ceil(results.length / LIMIT);
 
+  if (pages > 1) {
+    pagination.innerHTML = `<li class="page-item ${
+      activePage === 1 ? "disabled" : ""
+    }"><button onclick="getPage('-')" class="page-link">
+    <img src="../images/products-images/double-left-arrow.svg" alt="leftArrow">
+  </button></li>`;
 
-
-
-
-let newCard = products.slice(-4);
-
-newCard.forEach((el) => {
-  newRow.append(getDisProduct(el));
-});
-
-let newBuy = products.toSorted((a, b) => a.rating - b.rating).slice(-4);
-
-newBuy.forEach((el) => {
-  newBuys.append(getDisProduct(el));
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const btn = document.querySelector(".menu");
-const catalogMenu = document.querySelector(".catolog__menu");
-
-btn.addEventListener("click", function () {
-  catalogMenu.classList.toggle("show-toggle");
-});
-
-
-const tabButtons = document.querySelectorAll(".btn__map");
-const tabContents = document.querySelectorAll(".tab-content");
-let active = 0;
-
-function getTabContents(){
-  tabContents.forEach((el ,i ) => {
-    if(active !== i ){
-      el.style.display = "none"
-    }else{
-      el.style.display = "block"
+    for (let i = 1; i <= pages; i++) {
+      pagination.innerHTML += `<li class="page-item"><button class="page-link ${
+        i === activePage ? "active" : ""
+      }" onclick="getPage(${i})">${i}</button></li>`;
     }
-  })
+
+    pagination.innerHTML += `<li class="page-item"><button onclick="getPage('+')" class="page-link pagination-next">
+    <img src="../images/products-images/double-right-arrow.svg" alt="rightArrow">
+  </button></li>`;
+  } else {
+    pagination.innerHTML = "";
+  }
+
+  let prevBtn = document.querySelector(".page-link");
+  let nextBtn = document.querySelector(".pagination-next");
+  if (activePage === 1) {
+    prevBtn.disabled = true;
+  } else if (activePage === pages) {
+    nextBtn.disabled = true;
+  }
+
+  productsRow.innerHTML = " ";
+
+  // productsQuantity.textContent = results.length;
+
+  let startProduct = (activePage - 1) * LIMIT;
+  let endProduct = activePage * LIMIT;
+
+  results.slice(startProduct, endProduct).map((el) => {
+    productsRow.append(getDisProduct(el));
+  });
 }
 
-getTabContents()
+function getPage(page) {
+  if (page === "+") {
+    activePage++;
+  } else if (page === "-") {
+    activePage--;
+  } else {
+    activePage = page;
+  }
+  getProducts();
+}
 
-tabButtons.forEach((el , i) => {
-  el.addEventListener("click" , function(){
-    active = i;
-    getTabContents()
-  })
-})
+getProducts();
 
-
-
-
-
-
-
-// const catolog = [
-//   {
-//     name: "Молоко, сыр, яйцо",
-//   },
-//   {
-//     name: "Хлеб",
-//   },
-//   {
-//     name: "Фрукты и овощи",
-//   },
-//   {
-//     name: "Замороженные продукты",
-//   },
-//   {
-//     name: "Напитки",
-//   },
-//   {
-//     name: "Кондитерские изделия",
-//   },
-//   {
-//     name: "Чай, кофе",
-//   },
-//   {
-//     name: "Бакалея",
-//   },
-//   {
-//     name: "Здоровое питание",
-//   },
-//   {
-//     name: "Зоотовары",
-//   },
-//   {
-//     name: "Непродовольственные товары",
-//   },
-//   {
-//     name: "Детское питание",
-//   },
-//   {
-//     name: "Мясо, птица, колбаса",
-//   },
-// ];
-
-// const catologs = document.querySelector(".catolog");
-
-// const catologLinkUl = document.createElement("ul");
-// const catologLinkLi = document.createElement("li");
-// const catologLinkA = document.createElement("a");
-
-// const catologLinkAText = document.createTextNode("Catolog");
-
-// catologLinkLi.appendChild(catologLinkA);
-// catologLinkUl.appendChild(catologLinkLi);
-// catologs.append(catologLinkUl);
+searchInput.addEventListener("keyup", function () {
+  search = this.value.trim().toLowerCase();
+  activePage = 1;
+  getProducts();
+});
