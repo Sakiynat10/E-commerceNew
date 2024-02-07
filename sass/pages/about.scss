@@ -1,1 +1,150 @@
+@use "../utils/variable" as var;
 @use "../global";
+
+#about{
+    padding-top: 140px;
+    padding-bottom: 50px;
+    .tab-about{
+         display: flex;
+         align-items: center;
+         gap: 8px;
+         a{
+            color:var.$title-color;
+            font-family: Rubik;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+            @media(min-width: 500px){
+                font-size: 24px;
+            }
+         }
+         .tab__link2{
+            color: var.$subtitle-color;
+         }
+    }
+
+    .about__infos{
+        .about__title{
+            padding-top: 44px;
+            padding-bottom: 16px;
+            color: var.$title-color;
+            font-family: Rubik;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            @media(min-width:768px) {
+                font-size: 64px;
+            }
+        }
+    
+        .subtitle{
+            color: var.$primary-color;
+            font-family: Rubik;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
+        .about__right--info{
+            margin-top: 60px;
+            max-width: 669px;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        @media(min-width: 810px){
+            display: flex;
+            .about__right--info{
+                width: 50%;
+                
+            }
+            .about__left--info{
+                width: 50%;
+                p{
+                    max-width: 508px;
+                }
+            }
+        }
+    }
+
+}
+
+#infos{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .info__cards{
+        @media(min-width:768px) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .info__card{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+        }
+
+        .card1,
+        .card2{
+            @media(min-width:768px) {
+                width: 50%;
+            }
+            @media(min-width: 1000px){
+                width: 30%;
+            }
+        }
+
+        .card3{
+            @media(min-width: 1000px){
+                width: 30%;
+            }
+        }
+
+        
+    }
+}
+
+#comment{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    .comment-cards{
+        @media(min-width:768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        img{
+            display: flex;
+            width: 68px;
+            height: 56px;
+            margin-right: auto;
+            margin-left: auto;
+            @media(min-width:768px) {
+                width: 113px;
+                height: 92px;
+                display: inline-block;
+            }
+            @media(min-width:1000px) {
+                width: 127px;
+                height: 103px;
+            }
+        }
+        .comment__title{
+            margin-top: 40px;
+            font-size: 14px;
+            padding: 20px 40px;
+            color: var.$secondary-color;
+            background-color: #E5FFDE;
+            @media(min-width:768px) {
+                width: 50%;
+                font-size: 24px;
+            }
+            @media(min-width:1000px) {
+                width: 70%;
+                padding: 30px 40px;
+            }
+        }
+    }
+}

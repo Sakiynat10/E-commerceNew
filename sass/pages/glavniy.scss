@@ -9,6 +9,12 @@ main {
         background-color: #fff;
         background-size: contain;
         background-position: center;
+        position: relative;
+        .dark-mode{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
 
         .deliver__content {
             display: flex;

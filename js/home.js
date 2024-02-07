@@ -37,7 +37,7 @@ function getDisProduct({
   const discountProductBtn = document.createElement("button");
   discountProductBtn.className = "korzinu";
   const discountProductHeartImg = document.createElement("img");
-  discountProductHeartImg.src = ".././images/index-images/heart.svg";
+  discountProductHeartImg.src = "../images/index-images/heart.svg";
   const discountProductPriceLeft = document.createElement("div");
   discountProductPriceLeft.className = "price__left";
   const discountProductPriceRight = document.createElement("div");
@@ -81,6 +81,9 @@ function getDisProduct({
   discountProductPriceRightP.appendChild(discountProductPriceRightPText);
   discountProductInfoH3.appendChild(discountProductInfoH3Text);
   discountProductBtn.appendChild(discountProductBtnText);
+ 
+  // discountProductBtn.onclick = addToCart(id)
+
 
   discountProductPriceLeft.append(
     discountProductPriceLeftH1,
@@ -123,15 +126,11 @@ function getDisProduct({
 }
 
 
-
 let discountCard = products.filter((el) => el.discount).slice(-4);
 
 discountCard.forEach((el) => {
   discountProducts.append(getDisProduct(el));
 });
-
-
-
 
 
 let newCard = products.slice(-4);
@@ -145,18 +144,6 @@ let newBuy = products.toSorted((a, b) => a.rating - b.rating).slice(-4);
 newBuy.forEach((el) => {
   newBuys.append(getDisProduct(el));
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -191,7 +178,14 @@ tabButtons.forEach((el , i) => {
   })
 })
 
+// let cartProducts = [];
 
+// cartQuantity.textContent = cartProducts.length;
+
+// function addToCart(id){
+//   let productFound = products.find((pr) => pr.id === id);
+//   cartProducts.push(productFound);
+// }
 
 
 

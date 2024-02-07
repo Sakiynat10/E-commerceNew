@@ -1,9 +1,10 @@
 const productsRow = document.querySelector(".discount__products");
 const searchInput = document.querySelector(".search-input");
 let search = "";
+
 // const productsQuantity = document.querySelector(".products-quantity");
 const pagination = document.querySelector(".pagination");
-let activePage = 1;
+let activePage = +localStorage.getItem("page") || 1;
 
 function getDisProduct({
   id,
@@ -76,7 +77,7 @@ function getDisProduct({
     discountProductRating.src = "../images/products/rating2.png";
   }
 
-  if(discount == 0){
+  if (discount == 0) {
     discountProductDiscount.style.display = "none";
   }
   discountProductDiscount.appendChild(discountProductDiscountText);
@@ -127,8 +128,6 @@ function getDisProduct({
   return discountProduct;
 }
 
-
-
 function getProducts() {
   let results = products.filter((el) => el.name.toLowerCase().includes(search));
 
@@ -137,7 +136,7 @@ function getProducts() {
   if (pages > 1) {
     pagination.innerHTML = `<li class="page-item ${
       activePage === 1 ? "disabled" : ""
-    }"><button onclick="getPage('-')" class="page-link">
+    }"><button onclick="getPage('-')" class="page-link pagination-prev">
     <img src="../images/products-images/double-left-arrow.svg" alt="leftArrow">
   </button></li>`;
 
@@ -150,21 +149,19 @@ function getProducts() {
     pagination.innerHTML += `<li class="page-item"><button onclick="getPage('+')" class="page-link pagination-next">
     <img src="../images/products-images/double-right-arrow.svg" alt="rightArrow">
   </button></li>`;
-  } else {
-    pagination.innerHTML = "";
   }
 
-  let prevBtn = document.querySelector(".page-link");
+  let prevBtn = document.querySelector(".pagination-prev");
   let nextBtn = document.querySelector(".pagination-next");
   if (activePage === 1) {
     prevBtn.disabled = true;
-  } else if (activePage === pages) {
+  }
+  if (activePage === pages) {
     nextBtn.disabled = true;
   }
 
   productsRow.innerHTML = " ";
 
-  // productsQuantity.textContent = results.length;
 
   let startProduct = (activePage - 1) * LIMIT;
   let endProduct = activePage * LIMIT;
@@ -182,6 +179,7 @@ function getPage(page) {
   } else {
     activePage = page;
   }
+  localStorage.setItem("page" , activePage );
   getProducts();
 }
 
@@ -190,5 +188,6 @@ getProducts();
 searchInput.addEventListener("keyup", function () {
   search = this.value.trim().toLowerCase();
   activePage = 1;
+  localStorage.setItem("page" , activePage);
   getProducts();
 });

@@ -19,6 +19,14 @@
   padding-left: 20px;
 }
 
+.container-12 {
+  max-width: 1012px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 li {
   list-style: none;
 }
@@ -562,4 +570,82 @@ footer .footer__bottom .navbar__menus a p {
 }
 footer .footer__bottom .navbar__menus a img {
   width: 24px;
+}
+
+#vakansy {
+  background: var(--Main-BGPage, #FBF8EC);
+}
+#vakansy .vakansy__tab {
+  padding-top: 140px;
+  padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#vakansy .vakansy__tab a {
+  color: black;
+}
+#vakansy .vakansy__title {
+  color: #414141;
+  font-family: Rubik;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 150%;
+}
+#vakansy .vakansy__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+@media (min-width: 568px) {
+  #vakansy .vakansy__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1100px) {
+  #vakansy .vakansy__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#vakansy .vakansy__cards .v-card {
+  background-color: #fff;
+  max-width: 376px;
+  padding: 45px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+#vakansy .vakansy__cards .v-card h1 {
+  color: #414141;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+}
+#vakansy .vakansy__cards .v-card .v__title {
+  color: var(--Main-onSurface, #414141);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+#vakansy .vakansy__cards .v-card p {
+  color: var(--Main-onSurface, #414141);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#vakansy .vakansy__cards .v-card .v__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }

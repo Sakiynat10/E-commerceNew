@@ -1,1 +1,67 @@
+@use "../utils/variable" as var;
 @use "../global";   
+
+#vakansy{
+    background: var(--Main-BGPage, #FBF8EC);
+    .vakansy__tab{
+        padding-top: 140px;
+        padding-bottom: 60px;
+        display: flex;
+        align-items: center;
+        a{
+            color: black;
+        }
+    }
+    .vakansy__title{
+        color: var.$title-color;
+        font-family: Rubik;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    .vakansy__cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        margin-top: 60px;
+        padding-bottom: 40px;
+        @media(min-width:568px) {
+            grid-template-columns: repeat(2 , 1fr);
+        }
+        @media(min-width:1100px) {
+            grid-template-columns: repeat(3 , 1fr);
+        }
+        .v-card{
+            background-color: var.$white-color;
+            max-width: 376px;
+            padding: 45px;
+            border-radius: 4px;
+            box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.10);
+            h1{
+                color: var.$title-color;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 150%;
+            }
+            .v__title{
+                color: var(--Main-onSurface, #414141);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 150%;
+                margin-top: 16px;
+                margin-bottom: 8px;
+            }
+            p{
+                color: var(--Main-onSurface, #414141);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+            }
+            .v__number{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+}
