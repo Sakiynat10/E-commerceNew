@@ -1,9 +1,9 @@
 const discountProducts = document.querySelector(".discount__products");
-const newRow = document.querySelector(".new__row");
-const newBuys = document.querySelector(".new__buy");
-const searchInput = document.querySelector(".search-input");
-const search = " ";
+const newProductsRow = document.querySelector(".new__row");
+const topRatingProducts = document.querySelector(".new__buy");
 
+
+/* Products */
 function getDisProduct({
   id,
   name,
@@ -30,14 +30,14 @@ function getDisProduct({
   const discountProductInfo = document.createElement("div");
   discountProductInfo.className = "discount__product--infos";
   const discountProductRating = document.createElement("img");
-  discountProductRating.src = ".././images/index-images/stars.png";
+  discountProductRating.src = ".././images/index/stars.png";
   discountProductRating.className = "product__star";
   const discountProductBtnDiv = document.createElement("div");
   discountProductBtnDiv.className = "product__btn__div";
   const discountProductBtn = document.createElement("button");
   discountProductBtn.className = "korzinu";
   const discountProductHeartImg = document.createElement("img");
-  discountProductHeartImg.src = "../images/index-images/heart.svg";
+  discountProductHeartImg.src = "../images/index/heart.svg";
   const discountProductPriceLeft = document.createElement("div");
   discountProductPriceLeft.className = "price__left";
   const discountProductPriceRight = document.createElement("div");
@@ -126,35 +126,47 @@ function getDisProduct({
 }
 
 
-let discountCard = products.filter((el) => el.discount).slice(-4);
-
-discountCard.forEach((el) => {
-  discountProducts.append(getDisProduct(el));
-});
+function getProducts(){
+  let results = products.filter((el) => el.name.toLowerCase().includes(search));
 
 
-let newCard = products.slice(-4);
+  let discountCard = results.filter((el) => el.discount).slice(-4);
 
-newCard.forEach((el) => {
-  newRow.append(getDisProduct(el));
-});
+  discountProducts.innerHTML = "";
+  
+  discountCard.forEach((el) => {
+    discountProducts.append(getDisProduct(el));
+  });
+  
+  
+  let newCard = results.slice(-4);
 
-let newBuy = products.toSorted((a, b) => a.rating - b.rating).slice(-4);
+  newProductsRow.innerHTML = "";
+  
+  newCard.forEach((el) => {
+    newProductsRow.append(getDisProduct(el));
+  });
+  
+  let newBuy = results.toSorted((a, b) => a.rating - b.rating).slice(-4);
 
-newBuy.forEach((el) => {
-  newBuys.append(getDisProduct(el));
-});
+  topRatingProducts.innerHTML = "";
+  
+  newBuy.forEach((el) => {
+    topRatingProducts.append(getDisProduct(el));
+  });
+}
+
+getProducts()
+
+searchInput.addEventListener("keyup" , function(){
+  search = this.value.trim().toLowerCase();
+  getProducts();
+})
 
 
 
-const btn = document.querySelector(".menu");
-const catalogMenu = document.querySelector(".catolog__menu");
 
-btn.addEventListener("click", function () {
-  catalogMenu.classList.toggle("show-toggle");
-});
-
-
+/*Tab Content */
 const tabButtons = document.querySelectorAll(".btn__map");
 const tabContents = document.querySelectorAll(".tab-content");
 let active = 0;
@@ -178,69 +190,3 @@ tabButtons.forEach((el , i) => {
   })
 })
 
-// let cartProducts = [];
-
-// cartQuantity.textContent = cartProducts.length;
-
-// function addToCart(id){
-//   let productFound = products.find((pr) => pr.id === id);
-//   cartProducts.push(productFound);
-// }
-
-
-
-
-
-// const catolog = [
-//   {
-//     name: "Молоко, сыр, яйцо",
-//   },
-//   {
-//     name: "Хлеб",
-//   },
-//   {
-//     name: "Фрукты и овощи",
-//   },
-//   {
-//     name: "Замороженные продукты",
-//   },
-//   {
-//     name: "Напитки",
-//   },
-//   {
-//     name: "Кондитерские изделия",
-//   },
-//   {
-//     name: "Чай, кофе",
-//   },
-//   {
-//     name: "Бакалея",
-//   },
-//   {
-//     name: "Здоровое питание",
-//   },
-//   {
-//     name: "Зоотовары",
-//   },
-//   {
-//     name: "Непродовольственные товары",
-//   },
-//   {
-//     name: "Детское питание",
-//   },
-//   {
-//     name: "Мясо, птица, колбаса",
-//   },
-// ];
-
-// const catologs = document.querySelector(".catolog");
-
-// const catologLinkUl = document.createElement("ul");
-// const catologLinkLi = document.createElement("li");
-// const catologLinkA = document.createElement("a");
-
-// const catologLinkAText = document.createTextNode("Catolog");
-
-// catologLinkLi.appendChild(catologLinkA);
-// catologLinkUl.appendChild(catologLinkLi);
-// catologs.append(catologLinkUl);

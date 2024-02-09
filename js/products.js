@@ -1,6 +1,5 @@
 const productsRow = document.querySelector(".discount__products");
-const searchInput = document.querySelector(".search-input");
-let search = "";
+
 
 // const productsQuantity = document.querySelector(".products-quantity");
 const pagination = document.querySelector(".pagination");
@@ -32,14 +31,14 @@ function getDisProduct({
   const discountProductInfo = document.createElement("div");
   discountProductInfo.className = "discount__product--infos";
   const discountProductRating = document.createElement("img");
-  discountProductRating.src = ".././images/index-images/stars.png";
+  discountProductRating.src = ".././images/index/stars.png";
   discountProductRating.className = "product__star";
   const discountProductBtnDiv = document.createElement("div");
   discountProductBtnDiv.className = "product__btn__div";
   const discountProductBtn = document.createElement("button");
   discountProductBtn.className = "korzinu";
   const discountProductHeartImg = document.createElement("img");
-  discountProductHeartImg.src = ".././images/index-images/heart.svg";
+  discountProductHeartImg.src = ".././images/index/heart.svg";
   const discountProductPriceLeft = document.createElement("div");
   discountProductPriceLeft.className = "price__left";
   const discountProductPriceRight = document.createElement("div");
@@ -64,7 +63,7 @@ function getDisProduct({
   discountProductDescription.textContent = description;
 
   if (rating == 5) {
-    discountProductRating.src = "../images/products/rating5.svg";
+    discountProductRating.src = "../images/products/rating1.svg";
   } else if (rating == 4.5) {
     discountProductRating.src = "../images/products/rating4.5.png";
   } else if (rating == 4) {
@@ -137,7 +136,7 @@ function getProducts() {
     pagination.innerHTML = `<li class="page-item ${
       activePage === 1 ? "disabled" : ""
     }"><button onclick="getPage('-')" class="page-link pagination-prev">
-    <img src="../images/products-images/double-left-arrow.svg" alt="leftArrow">
+    <img src="../images/product/double-left-arrow.svg" alt="leftArrow">
   </button></li>`;
 
     for (let i = 1; i <= pages; i++) {
@@ -147,7 +146,7 @@ function getProducts() {
     }
 
     pagination.innerHTML += `<li class="page-item"><button onclick="getPage('+')" class="page-link pagination-next">
-    <img src="../images/products-images/double-right-arrow.svg" alt="rightArrow">
+    <img src="../images/product/double-right-arrow.svg" alt="rightArrow">
   </button></li>`;
   }
 
