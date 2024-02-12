@@ -12,38 +12,36 @@
   <link rel="stylesheet" href="../css/glavniy.min.css">
   <link rel="icon" href="../images/sitelogo1.png">
 </head>
+
 <body>
   <div class="catolog__menu">
     <div class="container">
       <div class="catolog">
-        
+
       </div>
     </div>
   </div>
   <header class="navbar">
     <div class="container navbar__contents">
       <a href="/index.html" class="navbar__logo">
-        <img class="desktop__logo" src="../images/index/logo.png" alt="logo"/>
-        <img class="mobile__logo" src="../images/index/logo (4).png" alt="logo"/>
+        <img class="desktop__logo" src="../images/index/logo.png" alt="logo" />
+        <img class="mobile__logo" src="../images/index/logo (4).png" alt="logo" />
       </a>
       <div href="../pages/catolog.html" class="navbar__toggle dropdown">
-        <button class="menu">        
+        <button class="menu">
           <img src="../images/index/menu.svg" alt="Menu svg" />
         </button>
         <a href="../pages/categry.html">Каталог</a>
       </div>
       <div class="navbar__search input-group">
-        <input id="text"  type="text" class="search-input" autocomplete="off" autofocus placeholder="Найти товар" />
-        <button type="button">
-          <i class="fas fa-microphone"></i>
-        </button>
+        <input id="text" type="text" class="search-input" autocomplete="off" autofocus placeholder="Найти товар" />
         <button type="submit">
           <img class="search__image" src="../images/index/search.svg" alt="" />
         </button>
       </div>
       <div class="navbar__menus">
         <a href="../pages/lovely.html">
-          <img src="../images/index/heart.svg" alt="heart"/>
+          <img src="../images/index/heart.svg" alt="heart" />
           <p>Избранное</p>
         </a>
         <a href="../pages/products.html">
@@ -51,8 +49,8 @@
           <p>продукты</p>
         </a>
         <a href="../pages/korzinka.html">
-          <span>1</span>
-          <img src="../images/index/shopping-cart.svg" alt="heart" />
+          <span class="cart-quantity"></span>
+          <img src="../images/index/shopping-cart.svg" alt="heart"/>
           <p>Корзина</p>
         </a>
       </div>
@@ -65,27 +63,29 @@
       </a>
     </div>
   </header>
-   <main>
+  <main>
     <section id="discount">
       <div class="container products">
         <!-- <h3 class="alert-info">Number of all products: <span class="products-quantity"></span><h3/> -->
         <h1 class="title">Все продукты</h1>
-        
-        <div class="discount__products"></div>
+
+        <div class="discount__products">
+          
+        </div>
         <ul class="pagination">
           <li class="page-item"><button class="page-link">
-            <img src="../images/product/double-left-arrow.svg" alt="">
-          </button></li>
+              <img src="../images/product/double-left-arrow.svg" alt="">
+            </button></li>
           <li class="page-item"><button class="page-link">1</button></li>
           <li class="page-item"><button class="page-link">2</button></li>
           <li class="page-item"><button class="page-link">3</button></li>
           <li class="page-item"><button class="page-link">
-            <img src="../images/product/double-right-arrow.svg" alt="rightarrow">
-          </button></li>
+              <img src="../images/product/double-right-arrow.svg" alt="rightarrow">
+            </button></li>
         </ul>
       </div>
     </section>
-   </main>
+  </main>
   <footer>
     <div class="footer__top" style="background-image: url(../images/index/footer__background.png);">
       <div class="container">
@@ -187,7 +187,7 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>
     </div>
   </footer>
   <!-- <script src="./js/main.js"></script> -->

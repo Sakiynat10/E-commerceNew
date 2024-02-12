@@ -155,7 +155,7 @@ function getProducts(){
     topRatingProducts.append(getDisProduct(el));
   });
 }
-
+ 
 getProducts()
 
 searchInput.addEventListener("keyup" , function(){

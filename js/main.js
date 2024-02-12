@@ -3,6 +3,15 @@ const categoryProducts = document.querySelector(".catolog");
 let searchInput = document.querySelector(".search-input");
 let search = "";
 
+let cartProducts = [];
+
+function getCartQuantity(){
+  cartQuantity.textContent = cartProducts.length;
+}
+
+getCartQuantity();
+
+
 /*Toggle */
 
 const btn = document.querySelector(".menu");
@@ -28,5 +37,4 @@ categories.map((el) => {
 
 
 
-/* Adding Search*/
 
