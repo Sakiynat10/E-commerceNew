@@ -1,32 +1,55 @@
-@use "../utils/variable" as var;
+@use "../utils/variable"as var;
 @use "../global";
 
 .products {
     padding-top: 120px;
+
     .title {
         font-size: 45px;
         padding-bottom: 60px;
     }
 }
 
-.pagination{
+.pagination {
     display: flex;
     justify-content: center;
     padding-top: 64px;
     gap: 34px;
-    button{
-        border-radius: 20px;
-        border: none;
-        font-size: 18px;
-        width: 40px;
-        height: 40px;
-        border: 1px solid var.$primary-color;
-        background-color: transparent;
-    }
-    .active{
+
+
+    .active {
         background-color: var.$primary-color;
         color: aliceblue;
     }
+}
 
-    
+.btn-group{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid var.$secondary-color;
+    border-radius: 4px;
+}
+
+.add__btn--minus,
+.add__btn--plus,
+.btn-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 22px;
+    border: none;
+    border: none;
+    @media(min-width:620px) {
+        height: 42px;
+    }
+    @media(min-width:830px) {
+        height: 48px;
+    }
+}
+
+.add__btn--minus,
+.add__btn--plus{
+    background-color: var.$secondary-color;
 }

@@ -960,8 +960,11 @@ footer .footer__bottom .navbar__menus a img {
             align-items: start;
     gap: 20px;
   }
-  #carts .carts .cart {
+  #carts .carts .cart-cards {
     width: 70%;
+  }
+  #carts .carts .cart-cards .cart {
+    width: 80%;
   }
   #carts .carts .checkout {
     width: 30%;

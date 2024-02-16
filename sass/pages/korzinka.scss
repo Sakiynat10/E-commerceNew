@@ -336,8 +336,11 @@
             display: flex;
             align-items: start;
             gap: 20px;
-            .cart{
+            .cart-cards{
                 width: 70%;
+                .cart{
+                    width: 80%;
+                }
             }            
             .checkout{
                 width: 30%;

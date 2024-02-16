@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/category.min.css" />
+    <title>Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/korzinka.min.css" />
     <link rel="icon" href="../images/sitelogo1.png" />
   </head>
   <body>
@@ -16,7 +22,7 @@
     </div>
     <header class="navbar">
       <div class="container navbar__contents">
-        <a href="/index.html" class="navbar__logo">
+        <a href="../index.html" class="navbar__logo">
           <img
             class="desktop__logo"
             src="../images/index/logo.png"
@@ -28,7 +34,7 @@
             alt="logo"
           />
         </a>
-        <div href="../pages/catolog.html" class="navbar__toggle dropdown">
+        <div class="navbar__toggle dropdown">
           <button class="menu">
             <img src="../images/index/menu.svg" alt="Menu svg" />
           </button>
@@ -39,32 +45,23 @@
             id="text"
             type="text"
             class="search-input"
-            autocomplete="off"
-            autofocus
             placeholder="Найти товар"
           />
-          <button type="button">
-            <i class="fas fa-microphone"></i>
-          </button>
           <button type="submit">
-            <img
-              class="search__image"
-              src="../images/index/search.svg"
-              alt=""
-            />
+            <img class="search__image" src=../images/index/search.svg" alt="" />
           </button>
         </div>
         <div class="navbar__menus">
-          <a href="../pages/lovely.html">
-            <img src="../images/index/heart.svg" alt="heart" />
+          <a href="./pages/lovely.html">
+            <img src="../images/index/heart.svg" width="24px" alt="heart" />
             <p>Избранное</p>
           </a>
           <a href="../pages/products.html">
             <img src="../images/index/kub.svg" alt="heart" />
             <p>продукты</p>
           </a>
-          <a href="../pages/korzinka.html">
-            <span>1</span>
+          <a href="../pages/corzinca.html">
+            <span class="cart-quantity"></span>
             <img src="../images/index/shopping-cart.svg" alt="heart" />
             <p>Корзина</p>
           </a>
@@ -81,21 +78,70 @@
     <!-- /Header Section-->
 
     <!--Main Section-->
-    <section id="category">
-      <div class="container__1250">
-        <div class="category__tab">
-          <a href="../index.html">Главная</a>
-          <img
-            src="../images/category-images/catolog-images/chevron-right.png"
-            alt=""
-          />
-          <a href="#">Каталог</a>
+    <main>
+      <section id="carts">
+        <div class="container">
+          <div class="cart__tab">
+            <a href="../index.html" class="link1">Главная</a>
+            <img src="../images/index/chevron-right.svg" alt="right" />
+            <a href="../pages/kontakt.html" class="link2">Корзина</a>
+          </div>
+          <div class="cart__title">
+            <h1 class="">Корзина</h1>
+            <span class="cart__quantity">0</span>
+          </div>
+          <div class="cards">
+            <div class="card__info">
+              <button class="cart__btn--left">
+                <img src="../images/corzinka/minus.svg" alt="minus svg" />
+                <p>Выделить всё</p>
+              </button>
+              <button class="cart__btn--right">Удалить выбранные</button>
+            </div>
+          </div>
+          <div class="carts">
+            <div class=" cart-cards cart-products">
+               <!-- <div class="cart">
+
+               </div> -->
+            </div>
+            <div class="checkout">
+              <div class="check">
+                <input class="checkbox" type="checkbox" />
+                <p class="check__title">Списать 200 ₽</p>
+              </div>
+              <p class="checkout__title">На карте накоплено 200 ₽</p>
+              <span class="line"></span>
+              <div class="checkout__discount">
+                <div class="discount__product">
+                  <p class="product__title">3 товара</p>
+                  <p class="product__price">258,10 ₽</p>
+                </div>
+                <div class="discount__amount">
+                  <p class="amount">Скидка</p>
+                  <p class="amount__price">-8,01 ₽</p>
+                </div>
+                <span class="line"></span>
+                <div class="total">
+                  <p class="total__title">Итог</p>
+                  <h1 class="">250,09 ₽</h1>
+                </div>
+                <div class="bonus">
+                  <img
+                    src="../images/corzinka/green-smile.png"
+                    alt="smile png"
+                  />
+                  <p class="bonus__title">Вы получяете 100 бонусов</p>
+                </div>
+                <p class="min">Минимальная сумма заказа 1000р</p>
+                <p class="order">Оформить заказ</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h1>Каталог</h1>
-        <div class="category__cards"></div>
-      </div>
-    </section>
-    <!-- /Main Section-->
+      </section>
+    </main>
+    <!--/Main Section-->
 
     <!--Footer Section-->
     <footer>
@@ -105,11 +151,7 @@
       >
         <div class="container">
           <div class="footer__medias">
-            <img
-              class="footer__smile"
-              src="..//images/index/smile.png"
-              alt=""
-            />
+            <img class="footer__smile" src="../images/index/smile.png" alt="" />
             <div class="footer__infos2">
               <ul class="footer__infos">
                 <li>
@@ -129,14 +171,14 @@
             </div>
             <div class="social__medias">
               <div class="medias">
-                <img src="..//images/index/instagram.svg" alt="" />
-                <img src="..//images/index/vkontakte.svg" alt="" />
-                <img src="..//images/index/facebook.svg" alt="" />
-                <img src="..//images/index/ok.svg" alt="" />
+                <img src="../images/index/instagram.svg" alt="" />
+                <img src="../images/index/vkontakte.svg" alt="" />
+                <img src="../images/index/facebook.svg" alt="" />
+                <img src="../images/index/ok.svg" alt="" />
               </div>
               <div class="tel">
                 <div class="footer__tel">
-                  <img src="..//images/index/phone.svg" alt="" />
+                  <img src="../images/index/phone.svg" alt="" />
                   <p>8 800 777 33 33</p>
                 </div>
                 <div class="footer__dizayn">
@@ -173,24 +215,24 @@
         <div class="container">
           <div class="navbar__menus">
             <a href="./pages/lovely.html">
-              <img src="..//images/index/menu__black.svg" alt="heart" />
+              <img src="../images/index/kub.svg" alt="heart" />
               <p>Каталог</p>
             </a>
             <a href="./pages/lovely.html">
-              <img src="..//images/index/heart.svg" alt="heart" />
+              <img src="../images/index/heart.svg" alt="heart" />
               <p>Избранное</p>
             </a>
             <a href="./pages/products.html">
-              <img src="..//images/index/kub.svg" alt="heart" />
+              <img src="../images/index/kub.svg" alt="heart" />
               <p>Заказы</p>
             </a>
             <a href="./pages/">
               <span>1</span>
-              <img src="..//images/index/shopping-cart.svg" alt="heart" />
+              <img src="../images/index/shopping-cart.svg" alt="heart" />
               <p>Корзина</p>
             </a>
             <div class="navbar__personal">
-              <img src="..//images/index/aleksey.svg" alt="aleks" />
+              <img src="../images/index/aleksey.svg" alt="aleks" />
             </div>
           </div>
         </div>
@@ -198,8 +240,11 @@
     </footer>
     <!-- /Footer Section-->
     <script src="../js/category-data.js"></script>
-    <script src="../js/category.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/products-data.js"></script>
     <script src="../js/utils.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
   </body>
 </html>
+
+

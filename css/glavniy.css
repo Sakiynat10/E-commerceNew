@@ -1258,3 +1258,52 @@ main #article .article a:hover {
     padding: 10px 18px;
   }
 }
+
+.btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  border: 1px solid #70C05B;
+  border-radius: 4px;
+}
+
+.add__btn--minus,
+.add__btn--plus,
+.btn-quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95px;
+  height: 22px;
+  border: none;
+  border: none;
+}
+@media (min-width: 620px) {
+  .add__btn--minus,
+  .add__btn--plus,
+  .btn-quantity {
+    height: 42px;
+  }
+}
+@media (min-width: 830px) {
+  .add__btn--minus,
+  .add__btn--plus,
+  .btn-quantity {
+    height: 48px;
+  }
+}
+
+.add__btn--minus,
+.add__btn--plus {
+  background-color: #70C05B;
+}
