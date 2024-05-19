@@ -1,14 +1,17 @@
-const categoryRow = document.querySelector(".lovely__rightt");
+const favouriteRow = document.querySelector(".favourite-row");
 
 
-function getCategoryProducts(){
-    categoryRow.innerHTML = "";
-    products.forEach((pr) => {
-          categoryRow.innerHTML += getProductCard(pr);
+
+function getFavouriteProducts(){
+    favouriteRow.innerHTML = "";
+    favouriteProducts.forEach((pr) => {
+        favouriteRow.innerHTML += getProductCard(pr , "favourite");
     })
 }
+getFavouriteProducts();
 
-getCategoryProducts();
+
+
 
 
 function addToCart(id){
@@ -27,7 +30,7 @@ function addToCart(id){
       cartProducts.push(productFound);
     }
     getCartQuantity();
-    getCategoryProducts();
+    getFavouriteProducts();
     localStorage.setItem("cart" , JSON.stringify(cartProducts));
   }
   
@@ -39,7 +42,7 @@ function addToCart(id){
       }
       return pr;
     });
-    getCategoryProducts();
+    getFavouriteProducts();
     getCartQuantity();
     localStorage.setItem("cart" , JSON.stringify(cartProducts));
   }
@@ -57,7 +60,7 @@ function addToCart(id){
       });
     }
     
-    getCategoryProducts();
+    getFavouriteProducts();
     getCartQuantity();
     localStorage.setItem( "cart", JSON.stringify(cartProducts));
   }

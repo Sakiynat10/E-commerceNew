@@ -36,16 +36,17 @@
                 </button>
             </div>
             <div class="navbar__menus">
-                <a href="./pages/lovely.html">
+                <a href="../pages/lovely.html" class="favourite">
                     <img src="../images/index/heart.svg" alt="heart" />
                     <p>Избранное</p>
+                    <span class="badge">0</span>
                 </a>
-                <a href="./pages/products.html">
+                <a href="../pages/products.html">
                     <img src="../images/index/kub.svg" alt="heart" />
                     <p>продукты</p>
                 </a>
-                <a href="./pages/">
-                    <span>1</span>
+                <a href="../pages/corzinca.html">
+                    <span class="cart-quantity"></span>
                     <img src="../images/index/shopping-cart.svg" alt="heart" />
                     <p>Корзина</p>
                 </a>
@@ -87,7 +88,26 @@
                         <div></div>
                     </div>
                     <div class="lovely__rightt">
-                        <div class="lovely__right">
+                        <!-- <div class="lovely__right">
+                            <img class="heart" src="../images/index/heart.svg" alt="">
+                            <img class="main__img" src="../images/index/moloko.png" alt="">
+                            <div class="infos">
+                                <div class="info">
+                                    <div class="info__left">
+                                        <h3 class="left__price">69,99 ₽</h3>
+                                        <p>С картой</p>
+                                    </div>
+                                    <div class="info__right">
+                                        <p class="right__price">140,99 ₽</p>
+                                        <p>Обычная</p>
+                                    </div>
+                                </div>
+                                <p class="description">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                                <img src="../images/index/stars.png" alt="">
+                                <button>В корзину</button>
+                            </div>
+                        </div> -->
+                        <!-- <div class="lovely__right">
                             <img class="heart" src="../images/index/heart.svg" alt="">
                             <img class="main__img" src="../images/index/moloko.png" alt="">
                             <div class="infos">
@@ -181,26 +201,7 @@
                                 <img src="../images/index/stars.png" alt="">
                                 <button>В корзину</button>
                             </div>
-                        </div>
-                        <div class="lovely__right">
-                            <img class="heart" src="../images/index/heart.svg" alt="">
-                            <img class="main__img" src="../images/index/moloko.png" alt="">
-                            <div class="infos">
-                                <div class="info">
-                                    <div class="info__left">
-                                        <h3 class="left__price">69,99 ₽</h3>
-                                        <p>С картой</p>
-                                    </div>
-                                    <div class="info__right">
-                                        <p class="right__price">140,99 ₽</p>
-                                        <p>Обычная</p>
-                                    </div>
-                                </div>
-                                <p class="description">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
-                                <img src="../images/index/stars.png" alt="">
-                                <button>В корзину</button>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -314,6 +315,9 @@
     </footer>
     <!-- /Footer Section-->
     <script src="../js/category-data.js"></script>
-    <script src="../js/main.js"></script></body>
+    <script src="../js/products-data.js"></script>
+    <script src="../js/const.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/utils.js"></script>
+    <script src="../js/category.js"></script>
 </html>
